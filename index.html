@@ -60,14 +60,12 @@
             overflow-x: hidden;
         }
 
-        /* Container */
         .container {
             max-width: 1140px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Navigation */
         header {
             position: sticky;
             top: 0;
@@ -169,22 +167,20 @@
             transform: translateY(-1px);
         }
 
-        /* Hero Section */
         .hero {
             padding: 80px 0 60px 0;
             position: relative;
         }
 
-        /* Tambahan CSS untuk Foto Profil */
         .hero-profile-picture {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            object-fit: cover; /* Memastikan gambar tidak pesek */
+            object-fit: cover;
             border: 4px solid var(--primary);
-            box-shadow: 0 0 20px var(--primary-glow); /* Efek glowing */
+            box-shadow: 0 0 20px var(--primary-glow);
             margin-bottom: 24px;
-            display: block; /* Agar margin auto bekerja */
+            display: block;
             transition: var(--transition);
         }
 
@@ -273,7 +269,6 @@
             color: var(--primary);
         }
 
-        /* Metric Grid */
         .metric-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -327,7 +322,6 @@
             font-weight: 500;
         }
 
-        /* Section Layouts */
         section {
             padding: 60px 0;
             border-top: 1px solid var(--border-color);
@@ -353,7 +347,6 @@
             color: var(--text-main);
         }
 
-        /* Filter Tabs */
         .filter-container {
             display: flex;
             gap: 10px;
@@ -379,7 +372,6 @@
             border-color: var(--primary);
         }
 
-        /* Experience Timeline Cards */
         .timeline {
             display: flex;
             flex-direction: column;
@@ -469,7 +461,6 @@
             font-size: 1.1rem;
         }
 
-        /* Two Column Grid */
         .two-col-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -494,7 +485,6 @@
             }
         }
 
-        /* Education Card */
         .edu-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -527,7 +517,6 @@
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
-        /* Publication & Award Items */
         .item-list {
             display: flex;
             flex-direction: column;
@@ -543,11 +532,17 @@
             align-items: flex-start;
             gap: 14px;
             transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
         }
 
         .list-item:hover {
             border-color: var(--border-highlight);
             transform: translateX(4px);
+        }
+
+        .list-item.clickable:hover {
+            background-color: var(--bg-card-hover);
         }
 
         .list-icon {
@@ -568,11 +563,18 @@
             color: var(--accent);
         }
 
+        .item-content {
+            flex: 1;
+        }
+
         .item-content h4 {
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--text-main);
             margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .item-content p {
@@ -580,7 +582,6 @@
             color: var(--text-muted);
         }
 
-        /* Skills Pill Layout */
         .skills-group {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -622,7 +623,6 @@
             background: var(--primary-glow);
         }
 
-        /* Footer */
         footer {
             padding: 40px 0;
             border-top: 1px solid var(--border-color);
@@ -653,7 +653,6 @@
             border-color: var(--primary);
         }
 
-        /* Print styles for export */
         @media print {
             header, .btn-theme, .btn-action, .filter-container, footer {
                 display: none !important;
@@ -682,7 +681,6 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <div class="container nav-inner">
             <a href="#" class="brand-logo">
@@ -711,10 +709,8 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero" id="about">
             <div class="container">
-                <!-- Tambahan Tag IMG untuk Foto Profil -->
                 <img src="https://raw.githubusercontent.com/greekhairan/portfolio/refs/heads/main/WhatsApp%20Image%202026-08-16%20at%2017.29.14.jpeg" alt="Khairan Nurfikri Profile Picture" class="hero-profile-picture">
 
                 <div class="hero-badge">
@@ -740,11 +736,11 @@
                     </div>
                     <div class="hero-meta-item">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
-                        <span>LinkedIn Profile</span>
+                        <!-- Tautan LinkedIn Aktif -->
+                        <a href="https://www.linkedin.com/in/khairan-nurfikri/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
                     </div>
                 </div>
 
-                <!-- Key Metrics Grid -->
                 <div class="metric-grid" id="metrics">
                     <div class="metric-card">
                         <div class="metric-value">150+</div>
@@ -766,7 +762,6 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience">
             <div class="container">
                 <div class="section-header">
@@ -774,7 +769,6 @@
                     <h2 class="section-title">Professional & Leadership Experience</h2>
                 </div>
 
-                <!-- Filter Buttons -->
                 <div class="filter-container">
                     <button class="filter-btn active" data-filter="all">All Experiences</button>
                     <button class="filter-btn" data-filter="professional">Professional</button>
@@ -783,7 +777,6 @@
                 </div>
 
                 <div class="timeline" id="experienceList">
-                    <!-- Professional Experience -->
                     <div class="card-exp" data-category="professional">
                         <div class="exp-head">
                             <div>
@@ -799,7 +792,6 @@
                         </ul>
                     </div>
 
-                    <!-- Leadership Experience 1 -->
                     <div class="card-exp" data-category="leadership">
                         <div class="exp-head">
                             <div>
@@ -815,7 +807,6 @@
                         </ul>
                     </div>
 
-                    <!-- Leadership Experience 2 -->
                     <div class="card-exp" data-category="leadership">
                         <div class="exp-head">
                             <div>
@@ -831,7 +822,6 @@
                         </ul>
                     </div>
 
-                    <!-- Leadership Experience 3 -->
                     <div class="card-exp" data-category="leadership">
                         <div class="exp-head">
                             <div>
@@ -847,7 +837,6 @@
                         </ul>
                     </div>
 
-                    <!-- Leadership Experience 4 -->
                     <div class="card-exp" data-category="leadership">
                         <div class="exp-head">
                             <div>
@@ -863,7 +852,6 @@
                         </ul>
                     </div>
 
-                    <!-- Leadership Experience 5 -->
                     <div class="card-exp" data-category="leadership">
                         <div class="exp-head">
                             <div>
@@ -879,7 +867,6 @@
                         </ul>
                     </div>
 
-                    <!-- Volunteering Experience 1 -->
                     <div class="card-exp" data-category="volunteering">
                         <div class="exp-head">
                             <div>
@@ -895,7 +882,6 @@
                         </ul>
                     </div>
 
-                    <!-- Volunteering Experience 2 -->
                     <div class="card-exp" data-category="volunteering">
                         <div class="exp-head">
                             <div>
@@ -913,18 +899,15 @@
             </div>
         </section>
 
-        <!-- Education & Achievements Section -->
         <section id="education">
             <div class="container">
                 <div class="two-col-grid">
-                    <!-- Left: Education & Publications -->
                     <div>
                         <div class="section-header">
                             <div class="section-tag">Academic Background</div>
                             <h2 class="section-title">Education & Publications</h2>
                         </div>
 
-                        <!-- Education Card -->
                         <div class="edu-card" style="margin-bottom: 24px;">
                             <div class="edu-header">
                                 <div class="edu-title">Universitas Padjadjaran (UNPAD)</div>
@@ -934,27 +917,31 @@
                             <span class="edu-gpa">GPA: 3.86 / 4.00 (Cum Laude)</span>
                         </div>
 
-                        <!-- Publications -->
                         <h3 style="font-size: 1.1rem; margin-bottom: 14px; color: var(--text-main);" id="publications">Academic & Policy Publications</h3>
                         <div class="item-list">
-                            <div class="list-item">
+                            <!-- Tautan Publikasi 1 Aktif -->
+                            <a href="https://southeastasiaanalyst.com/why-singapore-doesnt-want-energy-independence" target="_blank" rel="noopener noreferrer" class="list-item clickable">
                                 <div class="list-icon">📄</div>
                                 <div class="item-content">
-                                    <h4>Why Singapore Doesn’t Want Energy Independence</h4>
+                                    <h4>Why Singapore Doesn’t Want Energy Independence 
+                                        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </h4>
                                     <p>Southeast Asia Analyst, Editorial Review (2025)</p>
                                 </div>
-                            </div>
-                            <div class="list-item">
+                            </a>
+                            <!-- Tautan Publikasi 2 Aktif -->
+                            <a href="https://doi.org/10.24198/intermestic" target="_blank" rel="noopener noreferrer" class="list-item clickable">
                                 <div class="list-icon">📄</div>
                                 <div class="item-content">
-                                    <h4>Dinamika Institusional dalam Diplomasi Ekonomi Indonesia terhadap Uni Emirat Arab Periode 2019-2024</h4>
+                                    <h4>Dinamika Institusional dalam Diplomasi Ekonomi Indonesia terhadap Uni Emirat Arab Periode 2019-2024
+                                        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </h4>
                                     <p>Academic Research Paper (2025)</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Right: Awards & Honors -->
                     <div id="awards">
                         <div class="section-header">
                             <div class="section-tag">Recognition</div>
@@ -1003,7 +990,6 @@
             </div>
         </section>
 
-        <!-- Core Competencies & Skills -->
         <section id="skills">
             <div class="container">
                 <div class="section-header">
@@ -1013,7 +999,6 @@
 
                 <div class="two-col-grid">
                     <div>
-                        <!-- Professional Skills -->
                         <div class="skills-group">
                             <div class="skills-group-title">
                                 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -1033,7 +1018,6 @@
                             </div>
                         </div>
 
-                        <!-- Technical Tools -->
                         <div class="skills-group">
                             <div class="skills-group-title">
                                 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
@@ -1057,7 +1041,6 @@
                     </div>
 
                     <div>
-                        <!-- Languages -->
                         <div class="skills-group">
                             <div class="skills-group-title">
                                 <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
@@ -1093,25 +1076,22 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-socials">
                 <a href="mailto:fikriikhairan@gmail.com">fikriikhairan@gmail.com</a>
                 <a href="tel:+6281234545947">+62 812 3454 5947</a>
-                <a href="#">LinkedIn Profile</a>
+                <!-- Tautan LinkedIn Footer Aktif -->
+                <a href="https://www.linkedin.com/in/khairan-nurfikri/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
             </div>
             <p>© 2026 Khairan Nurfikri. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Interactive JavaScript -->
     <script>
-        // 1. Theme Toggle (Dark / Light Mode)
         const themeBtn = document.getElementById('themeToggle');
         const root = document.documentElement;
 
-        // Load saved theme or default to dark
         const currentTheme = localStorage.getItem('theme') || 'dark';
         if (currentTheme === 'light') {
             root.setAttribute('data-theme', 'light');
@@ -1134,13 +1114,11 @@
             }
         });
 
-        // 2. Experience Filter Functionality
         const filterBtns = document.querySelectorAll('.filter-btn');
         const expCards = document.querySelectorAll('.card-exp');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
@@ -1157,7 +1135,6 @@
             });
         });
 
-        // 3. Smooth Header Shadow on Scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 20) {
