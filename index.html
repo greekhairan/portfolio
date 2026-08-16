@@ -175,6 +175,24 @@
             position: relative;
         }
 
+        /* Tambahan CSS untuk Foto Profil */
+        .hero-profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover; /* Memastikan gambar tidak pesek */
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 20px var(--primary-glow); /* Efek glowing */
+            margin-bottom: 24px;
+            display: block; /* Agar margin auto bekerja */
+            transition: var(--transition);
+        }
+
+        .hero-profile-picture:hover {
+            transform: scale(1.05) rotate(3deg);
+            box-shadow: 0 0 30px var(--border-highlight);
+        }
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -468,6 +486,12 @@
             .nav-links {
                 display: none;
             }
+            .hero-profile-picture {
+                width: 120px;
+                height: 120px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         /* Education Card */
@@ -649,6 +673,10 @@
             section {
                 padding: 24px 0 !important;
             }
+            .hero-profile-picture {
+                border: 2px solid #000 !important;
+                box-shadow: none !important;
+            }
         }
     </style>
 </head>
@@ -686,6 +714,9 @@
         <!-- Hero Section -->
         <section class="hero" id="about">
             <div class="container">
+                <!-- Tambahan Tag IMG untuk Foto Profil -->
+                <img src="https://raw.githubusercontent.com/greekhairan/portfolio/refs/heads/main/WhatsApp%20Image%202026-08-16%20at%2017.29.14.jpeg" alt="Khairan Nurfikri Profile Picture" class="hero-profile-picture">
+
                 <div class="hero-badge">
                     <span class="status-dot"></span> Available for Commercial & Strategy Roles
                 </div>
